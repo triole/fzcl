@@ -30,7 +30,9 @@ func TestTime(t *testing.T) {
 		{13, 54, "five til two"},
 		{13, 56, "two o'clock"},
 		{15, 37, "twenty til four"},
+		{16, 50, "ten to five"},
 		{18, 00, "six o'clock"},
+		{23, 39, "twenty til midnight"},
 		{23, 44, "quarter til midnight"},
 		{23, 48, "ten til midnight"},
 	}
