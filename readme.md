@@ -1,4 +1,4 @@
-# Fzcl
+# Fzcl ![build](https://github.com/triole/fzcl/actions/workflows/build.yaml/badge.svg)
 
 <!--- mdtoc: toc begin -->
 
