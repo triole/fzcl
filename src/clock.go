@@ -40,7 +40,7 @@ func fuzzy(now time.Time) string {
 	if hours == 0 && minutes == 0 {
 		glue = ""
 	}
-	if hours == 12 && isAM == false {
+	if hours == 12 && !isAM {
 		hours = 100
 	}
 
