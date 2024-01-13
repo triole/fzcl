@@ -30,7 +30,8 @@ func TestTime(t *testing.T) {
 		{13, 54, "five til two"},
 		{13, 56, "two o'clock"},
 		{15, 37, "twenty til four"},
-		{16, 50, "ten to five"},
+		{16, 40, "twenty til five"},
+		{16, 50, "ten til five"},
 		{18, 00, "six o'clock"},
 		{23, 39, "twenty til midnight"},
 		{23, 44, "quarter til midnight"},
@@ -42,7 +43,10 @@ func TestTime(t *testing.T) {
 			now, _ := time.Parse("15:04", param.Name())
 			result := fuzzy(now)
 			if result != param.out {
-				t.Errorf("%s got %s, want %s", now.Format("15:04"), result, param.out)
+				t.Errorf(
+					"%s got %s, want %s",
+					now.Format("15:04"), result, param.out,
+				)
 			}
 		})
 	}

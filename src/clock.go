@@ -19,14 +19,17 @@ func fuzzy(now time.Time) string {
 		hours = hours - 12
 	}
 
-	if minutes > 0 && minutes != 30 {
-		minutes = (minutes/5 + 1) * 5
+	if minutes > 0 {
+		if minutes != 30 && minutes%10 != 0 {
+			minutes = (minutes/5 + 1) * 5
+		}
+		if minutes > 30 {
+			minutes = 60 - minutes
+			hours++
+			glue = "til"
+		}
 	}
-	if minutes > 30 {
-		minutes = 60 - minutes
-		hours++
-		glue = "til"
-	}
+
 	if minutes == 0 {
 		glue = ""
 		suffix = " o'clock"
